@@ -29,4 +29,4 @@ const Name = () => <h4>Name</h4>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<Start />);
+root.render(<LegoList />);
