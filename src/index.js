@@ -22,9 +22,9 @@ const Set = () => {
     );
 };
 
-const Image = () => <h2>image placeholder</h2>;
-const Number = () => <h2>Number</h2>;
-const Name = () => <h4>Name</h4>;
+const Image = () => <img src='/assets/images/6341.png'/>;
+const Number = () => <h2>6341</h2>;
+const Name = () => <h4>Gas and Go Flyer</h4>;
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
