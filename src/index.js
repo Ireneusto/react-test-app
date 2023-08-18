@@ -1,20 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import './index.css';
+
 function LegoList() {
     return (
-        <div>
+        <section className='legoList'>
             <Set />
             <Set />
             <Set />
             <Set />
-        </div>
+        </section>
     );
 }
 
 const Set = () => {
     return (
-        <article>
+        <article className='set'>
             <Image />
             <Number />
             <Name />
@@ -22,7 +24,7 @@ const Set = () => {
     );
 };
 
-const Image = () => <img src='/assets/images/6341.png'/>;
+const Image = () => <img src='/assets/images/6341.png' alt="lego plane with little gas car"/>;
 const Number = () => <h2>6341</h2>;
 const Name = () => <h4>Gas and Go Flyer</h4>;
 
