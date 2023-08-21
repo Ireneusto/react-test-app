@@ -3,31 +3,28 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-function LegoList() {
+const number = '6341';
+const name = 'Gas and Go Flyer';
+const img = './assets/images/6341.png';
+
+const LegoList = () => {
     return (
         <section className='legoList'>
-            <Set />
-            <Set />
-            <Set />
-            <Set />
+            <Set number={number} name={name} img={img}/>
+            <Set number={number} name={name} img={img}/>
         </section>
     );
 }
 
-const Set = () => {
+const Set = (props) => {
     return (
         <article className='set'>
-            <Image />
-            <Number />
-            <Name />
+            <img src={props.img} alt={props.name} />
+            <h2>{props.number}</h2>
+            <h4>{props.name}</h4>
         </article>
     );
 };
-
-const Image = () => <img src='/assets/images/6341.png' alt="lego plane with little gas car"/>;
-const Number = () => <h2>6341</h2>;
-const Name = () => <h4>Gas and Go Flyer</h4>;
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
