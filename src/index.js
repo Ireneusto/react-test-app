@@ -3,18 +3,29 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-const number = '6341';
-const name = 'Gas and Go Flyer';
-const img = './assets/images/6341.png';
+const sets = [
+    {
+        number: '6341',
+        name: 'Gas and Go Flyer',
+        img: './assets/images/6341.png',
+    },
+    {
+        number: '6515',
+        name: 'Stunt Copter',
+        img: './assets/images/6515.png',
+    }
+]
 
 const LegoList = () => {
     return (
         <section className='legoList'>
-            <Set number={number} name={name} img={img}/>
-            <Set number={number} name={name} img={img}/>
+            {sets.map((set) => {
+                const {number, name, img} = set;
+                return <Set number={number} name={name} img={img} />;
+            })}
         </section>
     );
-}
+};
 
 const Set = (props) => {
     return (
