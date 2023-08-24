@@ -22,19 +22,19 @@ const LegoList = () => {
     return (
         <section className='legoList'>
             {sets.map((set) => {
-                const {number, name, img, id} = set;
-                return <Set number={number} name={name} img={img} key={id} />;
+                return <Set {...set} key={set.id} />;
             })}
         </section>
     );
 };
 
 const Set = (props) => {
+    const {img, name, number} = props;
     return (
         <article className='set'>
-            <img src={props.img} alt={props.name} />
-            <h2>{props.number}</h2>
-            <h4>{props.name}</h4>
+            <img src={img} alt={name} />
+            <h2>{number}</h2>
+            <h4>{name}</h4>
         </article>
     );
 };
