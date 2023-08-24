@@ -8,11 +8,13 @@ const sets = [
         number: '6341',
         name: 'Gas and Go Flyer',
         img: './assets/images/6341.png',
+        id: 1,
     },
     {
         number: '6515',
         name: 'Stunt Copter',
         img: './assets/images/6515.png',
+        id: 2,
     }
 ]
 
@@ -20,8 +22,8 @@ const LegoList = () => {
     return (
         <section className='legoList'>
             {sets.map((set) => {
-                const {number, name, img} = set;
-                return <Set number={number} name={name} img={img} />;
+                const {number, name, img, id} = set;
+                return <Set number={number} name={name} img={img} key={id} />;
             })}
         </section>
     );
