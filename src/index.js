@@ -21,12 +21,23 @@ const sets = [
 const LegoList = () => {
     return (
         <section className='legoList'>
+            <EventExamples />
             {sets.map((set) => {
                 return <Set {...set} key={set.id} />;
             })}
         </section>
     );
 };
+
+const EventExamples = () => {
+    return <section>
+        <form>
+            <h2>Typical form</h2>
+            <input type="text" name='example' style={{margin: '1rem 0'}}/>
+        </form>
+        <button>click me</button>
+        </section>
+}
 
 const Set = (props) => {
     const {img, name, number} = props;
