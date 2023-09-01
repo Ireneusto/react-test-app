@@ -19,32 +19,26 @@ const sets = [
 ]
 
 const LegoList = () => {
+    const stringValue = 'blocks'
+    const displayValue = () => {
+        console.log(stringValue);
+    }
     return (
         <section className='legoList'>
-            <EventExamples />
             {sets.map((set) => {
-                return <Set {...set} key={set.id} />;
+                return <Set {...set} key={set.id} displayValue={displayValue}/>;
             })}
         </section>
     );
 };
 
-const EventExamples = () => {
-    return <section>
-        <form>
-            <h2>Typical form</h2>
-            <input type="text" name='example' style={{margin: '1rem 0'}}/>
-        </form>
-        <button>click me</button>
-        </section>
-}
-
 const Set = (props) => {
-    const {img, name, number} = props;
+    const {img, name, number, displayValue} = props;
     return (
         <article className='set'>
             <img src={img} alt={name} />
             <h2>{number}</h2>
+            <button onClick={displayValue}>click me</button>
             <h4>{name}</h4>
         </article>
     );
