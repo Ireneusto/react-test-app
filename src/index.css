@@ -20,16 +20,20 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    .legoList{
-        grid-template-columns: repeat(3, 1fr);
+    .legoList {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
     }
 }
-.set{
+
+.set {
     background: #fff;
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
+    position: relative;
 }
+
 .set img {
     width: 100%;
     object-fit: cover;
@@ -40,9 +44,30 @@ body {
     font-size: 1rem;
 }
 
-.book h4 {
+.set h4 {
     color: #611d98;
-     font-size: 0.85rem;
-     margin-top: 0.5rem;
-     letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.set p {
+    margin: 1rem 0 0.5rem;
+}
+
+.index {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #34ebd2;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3rem;
 }

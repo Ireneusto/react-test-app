@@ -1,6 +1,7 @@
 import img1 from './images/set-1.png'
 import img2 from './images/set-2.png'
 import img3 from './images/set-3.png'
+import img4 from './images/set-4.png'
 
 export const sets = [
     {
@@ -20,5 +21,11 @@ export const sets = [
         name: 'Wave Rebel',
         img: img3,
         id: 3,
+    },
+    {
+        number: '6594',
+        name: 'Gas Transit',
+        img: img4,
+        id: 4,
     }
 ]
