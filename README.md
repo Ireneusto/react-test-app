@@ -1,3 +1,8 @@
+# Lego_test_app
+A single react page.\
+Live version:
+https://lego-react-test-app.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
